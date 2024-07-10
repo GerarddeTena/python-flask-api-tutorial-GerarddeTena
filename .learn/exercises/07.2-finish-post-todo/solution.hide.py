@@ -1,11 +1,14 @@
 from flask import Flask, jsonify, request
+
 app = Flask(__name__)
 
-todos = [ { "label": "My first task", "done": False } ]
+todos = [{"label": "My first task", "done": False}]
+
 
 @app.route('/todos', methods=['GET'])
 def hello_world():
     return jsonify(todos)
+
 
 @app.route('/todos', methods=['POST'])
 def add_new_todo():

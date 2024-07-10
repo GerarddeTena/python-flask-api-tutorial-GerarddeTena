@@ -55,7 +55,8 @@ def test_one_dummy():
     assert len(app.todos) > 0
 
 
-@pytest.mark.it('Each item inside the global todos list should have the following format: { "label": "Sample", "done": True }')
+@pytest.mark.it(
+    'Each item inside the global todos list should have the following format: { "label": "Sample", "done": True }')
 def test_items_format():
     from src import app
     for task in app.todos:
